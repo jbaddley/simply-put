@@ -1,11 +1,17 @@
-const Footer = () => {
-  return (
-    <footer className='bg-stone-300 py-4 text-center text-white'>
-      <div className='container'>
-        <p className='text-sm uppercase'>Simply Put - Health, Wealth and Music</p>
-      </div>
-    </footer>
-  );
-};
+"use client";
 
-export default Footer;
+import { Footer } from "flowbite-react";
+import dayjs from "dayjs";
+export default function DefaultFooter() {
+  return (
+    <Footer container>
+      <Footer.Copyright by='SimplyPut' href='/' year={dayjs().year()} />
+      <Footer.LinkGroup>
+        <Footer.Link href='/business-mindset-unleashed'>Business Mindset Unleased</Footer.Link>
+        <Footer.Link href='/affiliate-marketing'>Affiliate Marketing</Footer.Link>
+        <Footer.Link href='/lead-generation'>Lead Generation</Footer.Link>
+        <Footer.Link href='/contact-us'>Contact Us</Footer.Link>
+      </Footer.LinkGroup>
+    </Footer>
+  );
+}
